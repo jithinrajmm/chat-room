@@ -1,0 +1,35 @@
+{% if messages %}
+<div style="  
+width: 50%;
+display:none;
+border: none;
+background-color: rgba(199, 5, 5, 0.356);
+padding: 10px; text-align: center;"> 
+   
+        
+        {% for message in messages %}
+        <p class="alert">
+            {{ message }}
+        </p>
+        {% endfor %}
+
+
+  </div>
+
+  <script defer>
+
+      const alertFunction=()=>{
+        
+        var array = [...document.getElementsByClassName('alert')]
+        console.log(array)
+
+        array.forEach(element => {
+            alert(element.innerText)
+         
+            
+        });
+      }
+      alertFunction()
+  </script>
+  {% endif %}
+ 
